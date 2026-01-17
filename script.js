@@ -1,7 +1,7 @@
 const url= "https://skogfghrpsiaibzbjgne.supabase.co/rest/v1/book_list";
 const apikey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNrb2dmZ2hycHNpYWliemJqZ25lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ3OTk1MDEsImV4cCI6MjA4MDM3NTUwMX0.Oli4Picy3nPZlxj0KUycXEyI2fu4AXiYJoKzg9TUh0Q"
 
-async function getBooks(){
+async function createBooks(){
 
     event.preventDefault();
 
@@ -27,6 +27,7 @@ async function getBooks(){
     if(response.status===201){
         document.getElementById("result").innerHTML="Book added successfully!";
     } else {
+    
         document.getElementById("result").innerHTML="Error adding book.";
     }
    
@@ -46,9 +47,9 @@ async function getBooks(){
     bookdata.innerHTML = "";
     data.forEach((item) => {
         bookdata.innerHTML += `<tr>
-            <td>${item.title}</td>
-            <td>${item.author}</td>
-            <td>${item.Year}</td>
+            <td>${item.book_title}</td>
+            <td>${item.author_name}</td>
+            <td>${item.book_year}</td>
         </tr>`;
     }); 
    
