@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <title>Books</title>
+</head>
+<body>
+
+    <main class="container">
+        <h1 class="my-4">Book Form</h1>
+        <form class="mb-5" onsubmit="createBooks()">
+
+            <div class="mb-3 d-flex gap-2">
+                <label for="book_title" class="form-label flex-shrink-0">Title:</label>
+                <input type="text" class="form-control" id="book_title">
+            </div>
+            <div class="mb-3 d-flex gap-2">
+                <label for="author_name" class="form-label flex-shrink-0">Author:</label>
+                <input type="text" class="form-control" id="author_name">
+            </div>
+            <div class="mb-3 d-flex gap-2">
+                <label for="book_year" class="form-label flex-shrink-0">Year:</label>
+                <input type="number" class="form-control" id="book_year">
+            </div>
+            <p id ="result"></p>
+            <button type="submit" class="btn btn-primary">Send data</button>
+        </form>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <t>Author</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="bookdata">
+                <!-- Book rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+        
